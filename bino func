@@ -1,0 +1,12 @@
+public static double binomial (int n, double p, int x){
+    	// n!/((n-r)!r!)p^x(1-q)^1-q
+    	return cnr(n, x)*Math.pow(p,x)*Math.pow(1-p,n-x);
+    }
+    public static int cnr (int c, int r){
+    	double out=1;
+    	for(int i=n,j=x,k=n-x; i>0; i--,j--,k--){
+    		out *= i;
+    		if(j>0) out/=j;
+    		if(k>0) out/=k;
+    	}
+    	return out;
